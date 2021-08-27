@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/ll-general.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/main-top-filter.css" />
+  </head>
+  <body>
+    <main class="main-body page-content">
+      <form
+        id="userbook-form-div"
+        class="section-form"
+        action="/review/filter"
+        method="post"
+      >
+        <div class="section-form__wrap">
+          <h1 class="section-form__title">Рецензии</h1>
+          <div class="section-form__search">
+            <input
+              type="search"
+              name="filter[search]"
+              id="section-form-search"
+              placeholder="Искать"
+              autofocus=""
+              value=""
+            />
+            <a class="section-form__search-btn" href="javascript:void(0);"></a>
+          </div>
+        </div>
+        <input
+          type="checkbox"
+          class="section-form__toggle"
+          id="section-form__toggle"
+        />
+        <label for="section-form__toggle"></label>
+        <div class="section-form__inner">
+          <div class="section-form__select">
+            <details class="ll-details-closed">
+              <summary>Жанр</summary>
+              <div>
+                <a
+                  href="javascript:void(0);"
+                  onclick="set_form_hidden_value($(this));"
+                  data-form_submit="userbook-form-div"
+                  data-value="0"
+                  data-value_holder="genre-input"
+                  >Все</a
+                >
+                <a
+                  href="javascript:void(0);"
+                  onclick="set_form_hidden_value($(this));"
+                  data-form_submit="userbook-form-div"
+                  data-value="535"
+                  data-value_holder="genre-input"
+                  >Наука и образование</a
+                >
+                <a
+                  href="javascript:void(0);"
+                  onclick="set_form_hidden_value($(this));"
+                  data-form_submit="userbook-form-div"
+                  data-value="1339"
+                  data-value_holder="genre-input"
+                  >Гуманитарные и общественные науки</a
+                >
+                <a
+                  href="javascript:void(0);"
+                  onclick="set_form_hidden_value($(this));"
+                  data-form_submit="userbook-form-div"
+                  data-value="537"
+                  data-value_holder="genre-input"
+                  >Гуманитарные и общественные науки</a
+                >
+                <a
+                  href="javascript:void(0);"
+                  onclick="set_form_hidden_value($(this));"
+                  data-form_submit="userbook-form-div"
+                  data-value="137"
+                  data-value_holder="genre-input"
+                  >Детские книги</a
+                >
+                <a
+                  href="javascript:void(0);"
+                  onclick="set_form_hidden_value($(this));"
+                  data-form_submit="userbook-form-div"
+                  data-value="409"
+                  data-value_holder="genre-input"
+                  >Зарубежная литература</a
+                >
+                <a
+                  href="javascript:void(0);"
+                  onclick="set_form_hidden_value($(this));"
+                  data-form_submit="userbook-form-div"
+                  data-value="387"
+                  data-value_holder="genre-input"
+                  >Дом, семья, хобби и досуг</a
+                >
+                <a
+                  href="javascript:void(0);"
+                  onclick="set_form_hidden_value($(this));"
+                  data-form_submit="userbook-form-div"
+                  data-value="1140"
+                  data-value_holder="genre-input"
+                  >Публицистическая литература</a
+                >
+                <a
+                  href="javascript:void(0);"
+                  onclick="set_form_hidden_value($(this));"
+                  data-form_submit="userbook-form-div"
+                  data-value="1"
+                  data-value_holder="genre-input"
+                  >Бизнес-книги</a
+                >
+                <a
+                  href="javascript:void(0);"
+                  onclick="set_form_hidden_value($(this));"
+                  data-form_submit="userbook-form-div"
+                  data-value="780"
+                  data-value_holder="genre-input"
+                  >Технические науки</a
+                >
+                <a
+                  href="javascript:void(0);"
+                  onclick="set_form_hidden_value($(this));"
+                  data-form_submit="userbook-form-div"
+                  data-value="1284"
+                  data-value_holder="genre-input"
+                  >Русская литература</a
+                >
+                <a
+                  href="javascript:void(0);"
+                  onclick="set_form_hidden_value($(this));"
+                  data-form_submit="userbook-form-div"
+                  data-value="612"
+                  data-value_holder="genre-input"
+                  >Филология</a
+                >
+                <a
+                  href="javascript:void(0);"
+                  onclick="set_form_hidden_value($(this));"
+                  data-form_submit="userbook-form-div"
+                  data-value="510"
+                  data-value_holder="genre-input"
+                  >Культура и искусство</a
+                >
+                <a
+                  href="javascript:void(0);"
+                  onclick="set_form_hidden_value($(this));"
+                  data-form_submit="userbook-form-div"
+                  data-value="1282"
+                  data-value_holder="genre-input"
+                  >Учебная литература</a
+                >
+                <a
+                  href="javascript:void(0);"
+                  onclick="set_form_hidden_value($(this));"
+                  data-form_submit="userbook-form-div"
+                  data-value="1217"
+                  data-value_holder="genre-input"
+                  >Современная проза</a
+                >
+                <a
+                  href="javascript:void(0);"
+                  onclick="set_form_hidden_value($(this));"
+                  data-form_submit="userbook-form-div"
+                  data-value="833"
+                  data-value_holder="genre-input"
+                  >Техническая литература</a
+                >
+              </div>
+            </details>
+            <input
+              type="hidden"
+              id="genre-input"
+              name="filter[genre_id]"
+              value=""
+            />
+          </div>
+          <div class="section-form__select">
+            <details class="ll-details-closed">
+              <summary>Оценка</summary>
+              <div>
+                <a
+                  href="javascript:void(0);"
+                  onclick="set_form_hidden_value($(this));"
+                  data-form_submit="userbook-form-div"
+                  data-value="-1"
+                  data-value_holder="rating-input"
+                  >Все</a
+                >
+                <a
+                  href="javascript:void(0);"
+                  onclick="set_form_hidden_value($(this));"
+                  data-form_submit="userbook-form-div"
+                  data-value="0"
+                  data-value_holder="rating-input"
+                  >Без оценки</a
+                >
+                <a
+                  href="javascript:void(0);"
+                  onclick="set_form_hidden_value($(this));"
+                  data-form_submit="userbook-form-div"
+                  data-value="plus"
+                  data-value_holder="rating-input"
+                  >Нравится</a
+                >
+                <a
+                  href="javascript:void(0);"
+                  onclick="set_form_hidden_value($(this));"
+                  data-form_submit="userbook-form-div"
+                  data-value="zero"
+                  data-value_holder="rating-input"
+                  >Нормально</a
+                >
+                <a
+                  href="javascript:void(0);"
+                  onclick="set_form_hidden_value($(this));"
+                  data-form_submit="userbook-form-div"
+                  data-value="minus"
+                  data-value_holder="rating-input"
+                  >Не нравится</a
+                >
+              </div>
+            </details>
+            <input
+              type="hidden"
+              id="rating-input"
+              name="filter[rating]"
+              value="-1"
+            />
+          </div>
+          <div class="section-form__select">
+            <details class="ll-details-closed">
+              <summary>Дата</summary>
+              <div>
+                <a
+                  href="javascript:void(0);"
+                  onclick="set_form_hidden_value($(this));"
+                  data-form_submit="userbook-form-div"
+                  data-value="0"
+                  data-value_holder="month-input"
+                  >Все</a
+                >
+                <a
+                  href="javascript:void(0);"
+                  onclick="set_form_hidden_value($(this));"
+                  data-form_submit="userbook-form-div"
+                  data-value="1"
+                  data-value_holder="month-input"
+                  >Месяц</a
+                >
+                <a
+                  href="javascript:void(0);"
+                  onclick="set_form_hidden_value($(this));"
+                  data-form_submit="userbook-form-div"
+                  data-value="3"
+                  data-value_holder="month-input"
+                  >3 месяца</a
+                >
+                <a
+                  href="javascript:void(0);"
+                  onclick="set_form_hidden_value($(this));"
+                  data-form_submit="userbook-form-div"
+                  data-value="6"
+                  data-value_holder="month-input"
+                  >Полгода</a
+                >
+                <a
+                  href="javascript:void(0);"
+                  onclick="set_form_hidden_value($(this));"
+                  data-form_submit="userbook-form-div"
+                  data-value="12"
+                  data-value_holder="month-input"
+                  >Год</a
+                >
+                <a
+                  href="javascript:void(0);"
+                  onclick="set_form_hidden_value($(this));"
+                  data-form_submit="userbook-form-div"
+                  data-value="24"
+                  data-value_holder="month-input"
+                  >2 года</a
+                >
+                <a
+                  href="javascript:void(0);"
+                  onclick="set_form_hidden_value($(this));"
+                  data-form_submit="userbook-form-div"
+                  data-value="36"
+                  data-value_holder="month-input"
+                  >3 года</a
+                >
+              </div>
+            </details>
+            <input
+              type="hidden"
+              id="month-input"
+              name="filter[months]"
+              value=""
+            />
+          </div>
+          <div class="section-form__select">
+            <details class="ll-details-closed">
+              <summary>По дате добавления</summary>
+              <div>
+                <a
+                  href="javascript:void(0);"
+                  onclick="set_form_hidden_value($(this));"
+                  data-form_submit="userbook-form-div"
+                  data-value="when"
+                  data-value_holder="reviews-filter-order"
+                  >По дате добавления</a
+                >
+                <a
+                  href="javascript:void(0);"
+                  onclick="set_form_hidden_value($(this));"
+                  data-form_submit="userbook-form-div"
+                  data-value="bookrating"
+                  data-value_holder="reviews-filter-order"
+                  >По рейтингу книги</a
+                >
+                <a
+                  href="javascript:void(0);"
+                  onclick="set_form_hidden_value($(this));"
+                  data-form_submit="userbook-form-div"
+                  data-value="plus"
+                  data-value_holder="reviews-filter-order"
+                  >Самые популярные</a
+                >
+                <a
+                  href="javascript:void(0);"
+                  onclick="set_form_hidden_value($(this));"
+                  data-form_submit="userbook-form-div"
+                  data-value="discussed"
+                  data-value_holder="reviews-filter-order"
+                  >Самые обсуждаемые</a
+                >
+              </div>
+            </details>
+            <input
+              type="hidden"
+              id="reviews-filter-order"
+              name="filter[order]"
+              value="when
+                        "
+            />
+          </div>
+        </div>
+        <input type="hidden" name="filter[page]" value="reviews" />
+        <input
+          type="hidden"
+          name="filter[user_login]"
+          id="user_login-input"
+          value=""
+        />
+      </form>
+    </main>
+  </body>
+</html>

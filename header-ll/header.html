@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/ll-general.css" />
+    <link rel="stylesheet" href="css/main-header.css" />
+  </head>
+  <body>
+    <header class="page-header main-body">
+      <div class="unreg-header" onclick="location.href='/challenge/2021'">
+        <div class="unreg-header__wrapper">
+          <form class="unreg-header__form" onclick="event.stopPropagation();">
+            <h3>Вход / регистрация</h3>
+            <div>
+              <input
+                id="checkin-email-block"
+                name="user[login]"
+                placeholder="E-mail или никнейм"
+                tabindex="1"
+                type="text"
+                autocomplete="on"
+              />
+              <button type="button" onclick="unregblock_check_email_exists();">
+                Продолжить
+              </button>
+            </div>
+            <div class="unreg-header__soc">
+              <a
+                href="javascript:void(0);"
+                onclick="network_auth('vkontakte', '', loginform_header_callreg);
+              send_reg_events();"
+                title="VK"
+                class="icon-vkontakte"
+              ></a>
+              <a
+                href="javascript:void(0);"
+                onclick="network_auth('facebook', '', loginform_header_callreg);
+              send_reg_events();"
+                title="Facebook"
+                class="icon-facebook"
+              ></a>
+              <a
+                href="javascript:void(0);"
+                onclick="network_auth('google', '', loginform_header_callreg);
+              send_reg_events();"
+                title="Google"
+                class="icon-google"
+              ></a>
+              <a
+                href="javascript:void(0);"
+                onclick="network_auth('odnoklassniki', '', loginform_header_callreg);
+              send_reg_events();"
+                title="Odnoklassniki"
+                class="icon-odnoklassniki"
+              ></a>
+              <a
+                href="javascript:void(0);"
+                onclick="network_auth('litres', '', loginform_header_callreg);
+              send_reg_events();"
+                title="ЛитРес"
+                class="icon-litres"
+              ></a>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div id="pageh" style="height: 72px; display: none"></div>
+
+      <div class="prm-header">
+        <div class="prm-block prm-block-17" id="prm-block-17" style="">
+          <div
+            class="header-pshadow"
+            style="
+              position: relative;
+              height: 180px;
+              background: #000000
+                url(https://s.livelib.ru/jul2021/Leonid_Kleshnya_930_180_1.jpg)
+                center center no-repeat;
+            "
+          >
+            <a
+              target="_blank"
+              style="position: absolute; top: 0; right: 0; bottom: 0; left: 0"
+              href="https://promo.livelib.ru/go/a0ls7w1fgq"
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div id="fixed-menu-2019" class="page-header main-body">
+        <div class="page-header__wrapper">
+          <details class="site-nav ll-details-closed">
+            <summary class="site-nav__toggle" data-obj_id="1"></summary>
+            <div class="site-nav-background">
+              <ul class="site-nav__list" data-simplebar="init">
+                <div class="simplebar-wrapper" style="margin: -14px 0px">
+                  <div class="simplebar-height-auto-observer-wrapper">
+                    <div class="simplebar-height-auto-observer"></div>
+                  </div>
+                  <div class="simplebar-mask">
+                    <div
+                      class="simplebar-offset"
+                      style="right: 0px; bottom: 0px"
+                    >
+                      <div
+                        class="simplebar-content-wrapper"
+                        style="height: auto; overflow: hidden"
+                      >
+                        <div
+                          class="simplebar-content"
+                          style="padding: 14px 0px"
+                        >
+                          <li class="site-nav__item">
+                            <details open="">
+                              <summary>
+                                <a href="/books">Что почитать</a>
+                              </summary>
+                              <div>
+                                <a href="/books/novelties">Новинки</a>
+                                <a href="/rec">Рекомендации </a>
+                                <a href="/books/ratings">Рейтинги</a>
+                                <a href="/genres">Жанры</a>
+                                <a href="/authors">Авторы</a>
+                                <a href="/selections">Подборки</a>
+                                <a href="/awards">Премии</a>
+                                <a href="/publishers">Издательства</a>
+                                <a href="/characters">Персонажи</a>
+                              </div>
+                            </details>
+                          </li>
+                          <li class="site-nav__item">
+                            <details open="">
+                              <summary><a href="/feed">Лента</a></summary>
+                              <div>
+                                <a href="/reviews">Рецензии</a>
+                                <a href="/quotes">Цитаты</a>
+                                <a href="/stories">Истории</a>
+                                <a href="/lifehacks">Лайфхаки</a>
+                              </div>
+                            </details>
+                          </li>
+
+                          <li class="site-nav__item">
+                            <a href="/readers">Читатели</a>
+                          </li>
+                          <li class="site-nav__item">
+                            <a href="/groups">Группы</a>
+                          </li>
+                          <li class="user-nav__item">
+                            <a href="/challenge/2021">Книжный вызов 2021</a>
+                          </li>
+                          <li class="site-nav__item">
+                            <a href="/games">Игры и конкурсы</a>
+                          </li>
+                          <li class="site-nav__item">
+                            <a href="/groups/filter/category:0000001">Клубы</a>
+                          </li>
+                          <li class="site-nav__item">
+                            <a href="/afisha">Афиша</a>
+                          </li>
+                          <li class="site-nav__item">
+                            <a href="/tests">Тесты</a>
+                          </li>
+                          <li class="site-nav__item">
+                            <a href="/bookswap">Книгообмен</a>
+                          </li>
+                          <li class="site-nav__item">
+                            <a href="/giveaways">Раздачи</a>
+                          </li>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="simplebar-placeholder"
+                    style="width: 0px; height: 0px"
+                  ></div>
+                </div>
+                <div
+                  class="simplebar-track simplebar-horizontal"
+                  style="visibility: hidden"
+                >
+                  <div
+                    class="simplebar-scrollbar"
+                    style="width: 0px; display: none"
+                  ></div>
+                </div>
+                <div
+                  class="simplebar-track simplebar-vertical"
+                  style="visibility: hidden"
+                >
+                  <div
+                    class="simplebar-scrollbar"
+                    style="height: 0px; display: none"
+                  ></div>
+                </div>
+              </ul>
+            </div>
+          </details>
+          <a class="page-header__logo" href="/">
+            <img
+              class="page-header__logo-image"
+              width="114"
+              height="23"
+              alt="LiveLib"
+              src="https://s.livelib.ru/img/skins/ll2019/logo_ll.svg"
+              onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+            />
+          </a>
+
+          <div
+            class="page-header__search page-header__search-sa"
+            id="header-top-search"
+          >
+            <form
+              id="header-top-search-form"
+              action="/find"
+              autocomplete="on"
+              method="POST"
+            >
+              <input
+                class="ll-input-search"
+                placeholder="Поиск книг"
+                autocomplete="off"
+                data-object_alias="booksauthors"
+                data-result="search-res-block"
+                id="find-text-ll2019"
+                name="filter[search]"
+                type="text"
+                value=""
+              />
+              <a class="page-header__search-btn" href="javascript:void(0);"></a>
+            </form>
+            <div id="search-res-block"></div>
+          </div>
+          <a
+            href="javascript:void(0);"
+            onclick="loginform_show('/messages/notifications', null, null, 'register', null, 'headerauth');"
+            class="page-header__item icon-notify"
+            data-obj_id="7"
+            id="system-msgs"
+            title="нет уведомлений"
+          >
+            <i style="visibility: hidden" id="ntfs-new-header-count"> </i>
+            <object
+              data-last-sys-ntf-id="0"
+              id="sys-obj-alerts"
+              onclick="show_alerts_2019(event);"
+            >
+              <a href="javascript:void(0);">Уведомления от Лайвлиб</a>
+              <a id="obj-alerts-btn-close" class="btn-close"></a>
+            </object>
+          </a>
+
+          <details class="user-nav ll-details-closed">
+            <summary
+              class="user-nav__toggle"
+              data-obj_id="6"
+              onclick="loginform_show(null,null,null,'register', null, 'headerauth');"
+              title="Меню"
+            >
+              <img
+                width="100%"
+                height="100%"
+                alt="Временный профиль"
+                src="https://i.livelib.ru/userpic/~/40x40/d41d/userpic.jpg"
+                onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+              />
+            </summary>
+          </details>
+          <div class="main-menu">
+            <div class="main-menu__limiter">
+              <ul class="main-menu__list">
+                <li class="main-menu__item"><a href="/">Главная</a></li>
+                <li class="main-menu__item">
+                  <a href="/books">Что почитать</a>
+                </li>
+                <li class="main-menu__item"><a href="/feed">Лента</a></li>
+                <li class="main-menu__item"><a href="/genres">Жанры</a></li>
+                <li class="main-menu__item"><a href="/authors">Авторы</a></li>
+                <li class="main-menu__item main-menu__item--active">
+                  <a href="/reviews">Рецензии</a>
+                </li>
+                <li class="main-menu__item"><a href="/quotes">Цитаты</a></li>
+                <li class="main-menu__item">
+                  <a href="/selections">Подборки</a>
+                </li>
+                <li class="main-menu__item">
+                  <a href="/lifehacks">Лайфхаки</a>
+                </li>
+                <li class="main-menu__item"><a href="/groups">Группы</a></li>
+                <li class="main-menu__item">
+                  <a
+                    href="/novelties/selection/20233-anonsy-knig-skoro-v-prodazhe"
+                    >Новинки</a
+                  >
+                </li>
+                <li class="main-menu__item">
+                  <a href="/publishers">Издательства</a>
+                </li>
+                <li class="main-menu__item">
+                  <a href="/characters">Персонажи</a>
+                </li>
+                <li class="main-menu__item"><a href="/readers">Читатели</a></li>
+                <li class="main-menu__item"><a href="/stories">Истории</a></li>
+                <li class="main-menu__item">
+                  <a href="/events">Мероприятия</a>
+                </li>
+                <li class="main-menu__item">
+                  <a href="/giveaways">Раздачи</a>
+                </li>
+                <li class="main-menu__item">
+                  <a href="/bookswap">Книгообмен</a>
+                </li>
+                <li class="main-menu__item"><a href="/games">Игры</a></li>
+                <li class="main-menu__item"><a href="/awards">Премии</a></li>
+                <li class="main-menu__item"><a href="/tests">Тесты</a></li>
+                <li class="main-menu__item">
+                  <a href="/challenge/2021">Книжный вызов 2021</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <input type="hidden" id="ll-new-header" value="ll2019" />
+
+      <div id="tinyalert"></div>
+    </header>
+
+    <div
+      class="reg-popup modal ll-loginform reg-popup-v2"
+      id="ll-loginform-popup-wrapper"
+      onclick="loginform_close();"
+      style="display: block"
+    >
+      <form id="regForm__checkin" action="javascript:void(0);">
+        <div class="reg-popup__wrapper">
+          <h3>Вход / регистрация</h3>
+          <p class="reg-popup__text" id="lrow-action-text"></p>
+          <input
+            id="socnetpopup-input-redirect-login"
+            type="hidden"
+            name="user[redirect]"
+            value="/messages/notifications"
+          />
+          <input
+            id="socnetpopup-input-onclick-login"
+            type="hidden"
+            name="user[onclick]"
+            value=""
+          />
+          <input
+            id="socnetpopup-input-source-login"
+            type="hidden"
+            name="source"
+            value="headerauth"
+          />
+          <input
+            id="socnetpopup-input-popup-login"
+            type="hidden"
+            name="popup"
+            value="regform"
+          />
+          <input
+            id="socnetpopup-input-url-login"
+            type="hidden"
+            name="current_url"
+            value=""
+          />
+          <div class="regForm__checkin-simplebar" data-simplebar="init">
+            <div class="simplebar-wrapper" style="margin: 0px">
+              <div class="simplebar-height-auto-observer-wrapper">
+                <div class="simplebar-height-auto-observer"></div>
+              </div>
+              <div class="simplebar-mask">
+                <div class="simplebar-offset" style="right: 0px; bottom: 0px">
+                  <div
+                    class="simplebar-content-wrapper"
+                    style="height: 100%; overflow: hidden"
+                  >
+                    <div class="simplebar-content" style="padding: 0px">
+                      <a
+                        href="javascript:void(0);"
+                        onclick="network_auth('vkontakte', '', loginform_socnet, 'regform');send_reg_events();"
+                        title="VK"
+                        class="reg-popup__sal icon-vkontakte"
+                      ></a>
+                      <a
+                        href="javascript:void(0);"
+                        onclick="network_auth('facebook', '', loginform_socnet, 'regform');send_reg_events();"
+                        title="Facebook"
+                        class="reg-popup__sal icon-facebook"
+                      ></a>
+                      <a
+                        href="javascript:void(0);"
+                        onclick="network_auth('google', '', loginform_socnet, 'regform');send_reg_events();"
+                        title="Google"
+                        class="reg-popup__sal icon-google"
+                      ></a>
+                      <a
+                        href="javascript:void(0);"
+                        onclick="network_auth('odnoklassniki', '', loginform_socnet, 'regform');send_reg_events();"
+                        title="Odnoklassniki"
+                        class="reg-popup__sal icon-odnoklassniki"
+                      ></a>
+                      <a
+                        href="javascript:void(0);"
+                        onclick="network_auth('twitter', '', loginform_socnet, 'regform');send_reg_events();"
+                        title="Twitter"
+                        class="reg-popup__sal icon-twitter"
+                      ></a>
+                      <a
+                        href="javascript:void(0);"
+                        onclick="network_auth('mailru', '', loginform_socnet, 'regform');send_reg_events();"
+                        title="Mail.ru"
+                        class="reg-popup__sal icon-mailru"
+                      ></a>
+                      <a
+                        href="javascript:void(0);"
+                        onclick="network_auth('litres', '', loginform_socnet, 'regform');send_reg_events();"
+                        title="ЛитРес"
+                        class="reg-popup__sal icon-litres"
+                      ></a>
+                      <a
+                        href="javascript:void(0);"
+                        onclick="network_auth('livejournal', '', loginform_socnet, 'regform');send_reg_events();"
+                        title="Живой Журнал"
+                        class="reg-popup__sal icon-livejournal"
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="simplebar-placeholder"
+                style="width: 364px; height: 128px"
+              ></div>
+            </div>
+            <div
+              class="simplebar-track simplebar-horizontal"
+              style="visibility: hidden"
+            >
+              <div
+                class="simplebar-scrollbar"
+                style="width: 0px; display: none"
+              ></div>
+            </div>
+            <div
+              class="simplebar-track simplebar-vertical"
+              style="visibility: hidden"
+            >
+              <div
+                class="simplebar-scrollbar"
+                style="height: 0px; display: none"
+              ></div>
+            </div>
+          </div>
+          <span>или</span>
+          <input
+            id="checkin-email"
+            class="reg-popup__input-req validate-initialized"
+            type="text"
+            placeholder="Введите e-mail или никнейм"
+            required=""
+          />
+          <span
+            class="reg-popup__unvalid"
+            id="check-email-nicname-popup__unvalid"
+          ></span>
+          <button
+            class="reg-popup__btnNext"
+            disabled="disabled"
+            onclick="loginform_new_check_email()"
+          >
+            Продолжить
+          </button>
+          <p class="reg-popup__text">
+            Продолжая, вы соглашаетесь с
+            <a href="/legaluser" class="reg-popup__link"
+              >условиями обслуживания</a
+            >
+          </p>
+        </div>
+      </form>
+
+      <form id="regForm__remind" class="hidden" method="POST" action="/forgot">
+        <div class="reg-popup__wrapper">
+          <h3>Сбросить пароль</h3>
+          <p class="reg-popup__text">
+            Если вы забыли пароль, вы можете поменять его.
+          </p>
+
+          <input type="hidden" name="user[id]" value="" />
+          <input
+            id="remind-email"
+            class="reg-popup__input-req validate-initialized"
+            type="email"
+            name="email"
+            placeholder="Введите e-mail"
+            required=""
+          />
+          <button
+            class="reg-popup__btnPrev"
+            type="button"
+            onclick="$('#regForm__remind').addClass('hidden');"
+          ></button>
+          <button class="reg-popup__btnNext" type="submit" disabled="disabled">
+            Отправить
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

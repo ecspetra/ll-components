@@ -1,0 +1,19 @@
+.section-menu
+  .section-menu__limiter
+    ul.section-menu__list.slick-initialized.slick-slider
+      .slick-list
+        .slick-track(style='\
+        opacity: 1;\
+        width: 899px;\
+        transform: translate3d(0px, 0px, 0px);\
+        ')
+          li.section-menu__item.section-menu__item--active.slick-slide.slick-current.slick-active(data-slick-index='0' aria-hidden='false')
+            a(href='/reviews' tabindex='0') Рецензии на книги
+          li.section-menu__item.slick-slide(data-slick-index='1' aria-hidden='true' tabindex='-1')
+            a(href='/reviews/experts' tabindex='-1') Рецензии экспертов
+          li.section-menu__item.slick-slide(data-slick-index='2' aria-hidden='true' tabindex='-1')
+            a(href='/reviews/frommain' tabindex='-1') Рецензии с главной
+          li.section-menu__item.slick-slide(data-slick-index='3' aria-hidden='true' tabindex='-1')
+            a(href='/reviews/only' tabindex='-1') Единственные
+          li.section-menu__item.slick-slide(data-slick-index='4' aria-hidden='true' tabindex='-1')
+            a(href='/media/reviews' tabindex='-1') Рецензии критиков

@@ -1,0 +1,203 @@
+header.page-header.main-body
+  .unreg-header(onclick="location.href='/challenge/2021'")
+    .unreg-header__wrapper
+      form.unreg-header__form(onclick='event.stopPropagation();')
+        h3 Вход / регистрация
+        div
+          input#checkin-email-block(name='user[login]' placeholder='E-mail или никнейм' tabindex='1' type='text' autocomplete='on')
+          button(type='button' onclick='unregblock_check_email_exists();')
+            | Продолжить
+        .unreg-header__soc
+          a.icon-vkontakte(href='javascript:void(0);' onclick="network_auth('vkontakte', '', loginform_header_callreg);\
+          send_reg_events();" title='VK')
+          a.icon-facebook(href='javascript:void(0);' onclick="network_auth('facebook', '', loginform_header_callreg);\
+          send_reg_events();" title='Facebook')
+          a.icon-google(href='javascript:void(0);' onclick="network_auth('google', '', loginform_header_callreg);\
+          send_reg_events();" title='Google')
+          a.icon-odnoklassniki(href='javascript:void(0);' onclick="network_auth('odnoklassniki', '', loginform_header_callreg);\
+          send_reg_events();" title='Odnoklassniki')
+          a.icon-litres(href='javascript:void(0);' onclick="network_auth('litres', '', loginform_header_callreg);\
+          send_reg_events();" title='ЛитРес')
+  #pageh(style='height: 72px; display: none')
+  .prm-header
+    #prm-block-17.prm-block.prm-block-17(style='')
+      .header-pshadow(style='\
+      position: relative;\
+      height: 180px;\
+      background: #000000\
+      url(https://s.livelib.ru/jul2021/Leonid_Kleshnya_930_180_1.jpg)\
+      center center no-repeat;\
+      ')
+        a(target='_blank' style='position: absolute; top: 0; right: 0; bottom: 0; left: 0' href='https://promo.livelib.ru/go/a0ls7w1fgq')
+  #fixed-menu-2019.page-header.main-body
+    .page-header__wrapper
+      details.site-nav.ll-details-closed
+        summary.site-nav__toggle(data-obj_id='1')
+        .site-nav-background
+          ul.site-nav__list(data-simplebar='init')
+            .simplebar-wrapper(style='margin: -14px 0px')
+              .simplebar-height-auto-observer-wrapper
+                .simplebar-height-auto-observer
+              .simplebar-mask
+                .simplebar-offset(style='right: 0px; bottom: 0px')
+                  .simplebar-content-wrapper(style='height: auto; overflow: hidden')
+                    .simplebar-content(style='padding: 14px 0px')
+                      li.site-nav__item
+                        details(open='')
+                          summary
+                            a(href='/books') Что почитать
+                          div
+                            a(href='/books/novelties') Новинки
+                            a(href='/rec') Рекомендации 
+                            a(href='/books/ratings') Рейтинги
+                            a(href='/genres') Жанры
+                            a(href='/authors') Авторы
+                            a(href='/selections') Подборки
+                            a(href='/awards') Премии
+                            a(href='/publishers') Издательства
+                            a(href='/characters') Персонажи
+                      li.site-nav__item
+                        details(open='')
+                          summary
+                            a(href='/feed') Лента
+                          div
+                            a(href='/reviews') Рецензии
+                            a(href='/quotes') Цитаты
+                            a(href='/stories') Истории
+                            a(href='/lifehacks') Лайфхаки
+                      li.site-nav__item
+                        a(href='/readers') Читатели
+                      li.site-nav__item
+                        a(href='/groups') Группы
+                      li.user-nav__item
+                        a(href='/challenge/2021') Книжный вызов 2021
+                      li.site-nav__item
+                        a(href='/games') Игры и конкурсы
+                      li.site-nav__item
+                        a(href='/groups/filter/category:0000001') Клубы
+                      li.site-nav__item
+                        a(href='/afisha') Афиша
+                      li.site-nav__item
+                        a(href='/tests') Тесты
+                      li.site-nav__item
+                        a(href='/bookswap') Книгообмен
+                      li.site-nav__item
+                        a(href='/giveaways') Раздачи
+              .simplebar-placeholder(style='width: 0px; height: 0px')
+            .simplebar-track.simplebar-horizontal(style='visibility: hidden')
+              .simplebar-scrollbar(style='width: 0px; display: none')
+            .simplebar-track.simplebar-vertical(style='visibility: hidden')
+              .simplebar-scrollbar(style='height: 0px; display: none')
+      a.page-header__logo(href='/')
+        img.page-header__logo-image(width='114' height='23' alt='LiveLib' src='https://s.livelib.ru/img/skins/ll2019/logo_ll.svg' onerror='this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);')
+      #header-top-search.page-header__search.page-header__search-sa
+        form#header-top-search-form(action='/find' autocomplete='on' method='POST')
+          input#find-text-ll2019.ll-input-search(placeholder='Поиск книг' autocomplete='off' data-object_alias='booksauthors' data-result='search-res-block' name='filter[search]' type='text' value='')
+          a.page-header__search-btn(href='javascript:void(0);')
+        #search-res-block
+      a#system-msgs.page-header__item.icon-notify(href='javascript:void(0);' onclick="loginform_show('/messages/notifications', null, null, 'register', null, 'headerauth');" data-obj_id='7' title='нет уведомлений')
+        i#ntfs-new-header-count(style='visibility: hidden')  
+        object#sys-obj-alerts(data-last-sys-ntf-id='0' onclick='show_alerts_2019(event);')
+          a(href='javascript:void(0);') Уведомления от Лайвлиб
+          a#obj-alerts-btn-close.btn-close
+      details.user-nav.ll-details-closed
+        summary.user-nav__toggle(data-obj_id='6' onclick="loginform_show(null,null,null,'register', null, 'headerauth');" title='Меню')
+          img(width='100%' height='100%' alt='Временный профиль' src='https://i.livelib.ru/userpic/~/40x40/d41d/userpic.jpg' onerror='this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);')
+      .main-menu
+        .main-menu__limiter
+          ul.main-menu__list
+            li.main-menu__item
+              a(href='/') Главная
+            li.main-menu__item
+              a(href='/books') Что почитать
+            li.main-menu__item
+              a(href='/feed') Лента
+            li.main-menu__item
+              a(href='/genres') Жанры
+            li.main-menu__item
+              a(href='/authors') Авторы
+            li.main-menu__item.main-menu__item--active
+              a(href='/reviews') Рецензии
+            li.main-menu__item
+              a(href='/quotes') Цитаты
+            li.main-menu__item
+              a(href='/selections') Подборки
+            li.main-menu__item
+              a(href='/lifehacks') Лайфхаки
+            li.main-menu__item
+              a(href='/groups') Группы
+            li.main-menu__item
+              a(href='/novelties/selection/20233-anonsy-knig-skoro-v-prodazhe') Новинки
+            li.main-menu__item
+              a(href='/publishers') Издательства
+            li.main-menu__item
+              a(href='/characters') Персонажи
+            li.main-menu__item
+              a(href='/readers') Читатели
+            li.main-menu__item
+              a(href='/stories') Истории
+            li.main-menu__item
+              a(href='/events') Мероприятия
+            li.main-menu__item
+              a(href='/giveaways') Раздачи
+            li.main-menu__item
+              a(href='/bookswap') Книгообмен
+            li.main-menu__item
+              a(href='/games') Игры
+            li.main-menu__item
+              a(href='/awards') Премии
+            li.main-menu__item
+              a(href='/tests') Тесты
+            li.main-menu__item
+              a(href='/challenge/2021') Книжный вызов 2021
+  input#ll-new-header(type='hidden' value='ll2019')
+  #tinyalert
+//- #ll-loginform-popup-wrapper.reg-popup.modal.ll-loginform.reg-popup-v2(onclick='loginform_close();' style='display: block')
+//-   form#regForm__checkin(action='javascript:void(0);')
+//-     .reg-popup__wrapper
+//-       h3 Вход / регистрация
+//-       p#lrow-action-text.reg-popup__text
+//-       input#socnetpopup-input-redirect-login(type='hidden' name='user[redirect]' value='/messages/notifications')
+//-       input#socnetpopup-input-onclick-login(type='hidden' name='user[onclick]' value='')
+//-       input#socnetpopup-input-source-login(type='hidden' name='source' value='headerauth')
+//-       input#socnetpopup-input-popup-login(type='hidden' name='popup' value='regform')
+//-       input#socnetpopup-input-url-login(type='hidden' name='current_url' value='')
+//-       .regForm__checkin-simplebar(data-simplebar='init')
+//-         .simplebar-wrapper(style='margin: 0px')
+//-           .simplebar-height-auto-observer-wrapper
+//-             .simplebar-height-auto-observer
+//-           .simplebar-mask
+//-             .simplebar-offset(style='right: 0px; bottom: 0px')
+//-               .simplebar-content-wrapper(style='height: 100%; overflow: hidden')
+//-                 .simplebar-content(style='padding: 0px')
+//-                   a.reg-popup__sal.icon-vkontakte(href='javascript:void(0);' onclick="network_auth('vkontakte', '', loginform_socnet, 'regform');send_reg_events();" title='VK')
+//-                   a.reg-popup__sal.icon-facebook(href='javascript:void(0);' onclick="network_auth('facebook', '', loginform_socnet, 'regform');send_reg_events();" title='Facebook')
+//-                   a.reg-popup__sal.icon-google(href='javascript:void(0);' onclick="network_auth('google', '', loginform_socnet, 'regform');send_reg_events();" title='Google')
+//-                   a.reg-popup__sal.icon-odnoklassniki(href='javascript:void(0);' onclick="network_auth('odnoklassniki', '', loginform_socnet, 'regform');send_reg_events();" title='Odnoklassniki')
+//-                   a.reg-popup__sal.icon-twitter(href='javascript:void(0);' onclick="network_auth('twitter', '', loginform_socnet, 'regform');send_reg_events();" title='Twitter')
+//-                   a.reg-popup__sal.icon-mailru(href='javascript:void(0);' onclick="network_auth('mailru', '', loginform_socnet, 'regform');send_reg_events();" title='Mail.ru')
+//-                   a.reg-popup__sal.icon-litres(href='javascript:void(0);' onclick="network_auth('litres', '', loginform_socnet, 'regform');send_reg_events();" title='ЛитРес')
+//-                   a.reg-popup__sal.icon-livejournal(href='javascript:void(0);' onclick="network_auth('livejournal', '', loginform_socnet, 'regform');send_reg_events();" title='Живой Журнал')
+//-           .simplebar-placeholder(style='width: 364px; height: 128px')
+//-         .simplebar-track.simplebar-horizontal(style='visibility: hidden')
+//-           .simplebar-scrollbar(style='width: 0px; display: none')
+//-         .simplebar-track.simplebar-vertical(style='visibility: hidden')
+//-           .simplebar-scrollbar(style='height: 0px; display: none')
+//-       span или
+//-       input#checkin-email.reg-popup__input-req.validate-initialized(type='text' placeholder='Введите e-mail или никнейм' required='')
+//-       span#check-email-nicname-popup__unvalid.reg-popup__unvalid
+//-       button.reg-popup__btnNext(disabled='disabled' onclick='loginform_new_check_email()')
+//-         | Продолжить
+//-       p.reg-popup__text
+//-         | Продолжая, вы соглашаетесь с
+//-         a.reg-popup__link(href='/legaluser') условиями обслуживания
+//-   form#regForm__remind.hidden(method='POST' action='/forgot')
+//-     .reg-popup__wrapper
+//-       h3 Сбросить пароль
+//-       p.reg-popup__text
+//-         | Если вы забыли пароль, вы можете поменять его.
+//-       input(type='hidden' name='user[id]' value='')
+//-       input#remind-email.reg-popup__input-req.validate-initialized(type='email' name='email' placeholder='Введите e-mail' required='')
+//-       button.reg-popup__btnPrev(type='button' onclick="$('#regForm__remind').addClass('hidden');")
+//-       button.reg-popup__btnNext(type='submit' disabled='disabled')
+//-         | Отправить

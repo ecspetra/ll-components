@@ -1,0 +1,64 @@
+form#userbook-form-div.section-form(action='/review/filter' method='post')
+  .section-form__wrap
+    h1.section-form__title Рецензии
+    .section-form__search
+      input#section-form-search(type='search' name='filter[search]' placeholder='Искать' autofocus='' value='')
+      a.section-form__search-btn(href='javascript:void(0);')
+  input#section-form__toggle.section-form__toggle(type='checkbox')
+  label(for='section-form__toggle')
+  .section-form__inner
+    .section-form__select
+      details.ll-details-closed
+        summary Жанр
+        div
+          a(href='javascript:void(0);' onclick='set_form_hidden_value($(this));' data-form_submit='userbook-form-div' data-value='0' data-value_holder='genre-input') Все
+          a(href='javascript:void(0);' onclick='set_form_hidden_value($(this));' data-form_submit='userbook-form-div' data-value='535' data-value_holder='genre-input') Наука и образование
+          a(href='javascript:void(0);' onclick='set_form_hidden_value($(this));' data-form_submit='userbook-form-div' data-value='1339' data-value_holder='genre-input') Гуманитарные и общественные науки
+          a(href='javascript:void(0);' onclick='set_form_hidden_value($(this));' data-form_submit='userbook-form-div' data-value='537' data-value_holder='genre-input') Гуманитарные и общественные науки
+          a(href='javascript:void(0);' onclick='set_form_hidden_value($(this));' data-form_submit='userbook-form-div' data-value='137' data-value_holder='genre-input') Детские книги
+          a(href='javascript:void(0);' onclick='set_form_hidden_value($(this));' data-form_submit='userbook-form-div' data-value='409' data-value_holder='genre-input') Зарубежная литература
+          a(href='javascript:void(0);' onclick='set_form_hidden_value($(this));' data-form_submit='userbook-form-div' data-value='387' data-value_holder='genre-input') Дом, семья, хобби и досуг
+          a(href='javascript:void(0);' onclick='set_form_hidden_value($(this));' data-form_submit='userbook-form-div' data-value='1140' data-value_holder='genre-input') Публицистическая литература
+          a(href='javascript:void(0);' onclick='set_form_hidden_value($(this));' data-form_submit='userbook-form-div' data-value='1' data-value_holder='genre-input') Бизнес-книги
+          a(href='javascript:void(0);' onclick='set_form_hidden_value($(this));' data-form_submit='userbook-form-div' data-value='780' data-value_holder='genre-input') Технические науки
+          a(href='javascript:void(0);' onclick='set_form_hidden_value($(this));' data-form_submit='userbook-form-div' data-value='1284' data-value_holder='genre-input') Русская литература
+          a(href='javascript:void(0);' onclick='set_form_hidden_value($(this));' data-form_submit='userbook-form-div' data-value='612' data-value_holder='genre-input') Филология
+          a(href='javascript:void(0);' onclick='set_form_hidden_value($(this));' data-form_submit='userbook-form-div' data-value='510' data-value_holder='genre-input') Культура и искусство
+          a(href='javascript:void(0);' onclick='set_form_hidden_value($(this));' data-form_submit='userbook-form-div' data-value='1282' data-value_holder='genre-input') Учебная литература
+          a(href='javascript:void(0);' onclick='set_form_hidden_value($(this));' data-form_submit='userbook-form-div' data-value='1217' data-value_holder='genre-input') Современная проза
+          a(href='javascript:void(0);' onclick='set_form_hidden_value($(this));' data-form_submit='userbook-form-div' data-value='833' data-value_holder='genre-input') Техническая литература
+      input#genre-input(type='hidden' name='filter[genre_id]' value='')
+    .section-form__select
+      details.ll-details-closed
+        summary Оценка
+        div
+          a(href='javascript:void(0);' onclick='set_form_hidden_value($(this));' data-form_submit='userbook-form-div' data-value='-1' data-value_holder='rating-input') Все
+          a(href='javascript:void(0);' onclick='set_form_hidden_value($(this));' data-form_submit='userbook-form-div' data-value='0' data-value_holder='rating-input') Без оценки
+          a(href='javascript:void(0);' onclick='set_form_hidden_value($(this));' data-form_submit='userbook-form-div' data-value='plus' data-value_holder='rating-input') Нравится
+          a(href='javascript:void(0);' onclick='set_form_hidden_value($(this));' data-form_submit='userbook-form-div' data-value='zero' data-value_holder='rating-input') Нормально
+          a(href='javascript:void(0);' onclick='set_form_hidden_value($(this));' data-form_submit='userbook-form-div' data-value='minus' data-value_holder='rating-input') Не нравится
+      input#rating-input(type='hidden' name='filter[rating]' value='-1')
+    .section-form__select
+      details.ll-details-closed
+        summary Дата
+        div
+          a(href='javascript:void(0);' onclick='set_form_hidden_value($(this));' data-form_submit='userbook-form-div' data-value='0' data-value_holder='month-input') Все
+          a(href='javascript:void(0);' onclick='set_form_hidden_value($(this));' data-form_submit='userbook-form-div' data-value='1' data-value_holder='month-input') Месяц
+          a(href='javascript:void(0);' onclick='set_form_hidden_value($(this));' data-form_submit='userbook-form-div' data-value='3' data-value_holder='month-input') 3 месяца
+          a(href='javascript:void(0);' onclick='set_form_hidden_value($(this));' data-form_submit='userbook-form-div' data-value='6' data-value_holder='month-input') Полгода
+          a(href='javascript:void(0);' onclick='set_form_hidden_value($(this));' data-form_submit='userbook-form-div' data-value='12' data-value_holder='month-input') Год
+          a(href='javascript:void(0);' onclick='set_form_hidden_value($(this));' data-form_submit='userbook-form-div' data-value='24' data-value_holder='month-input') 2 года
+          a(href='javascript:void(0);' onclick='set_form_hidden_value($(this));' data-form_submit='userbook-form-div' data-value='36' data-value_holder='month-input') 3 года
+      input#month-input(type='hidden' name='filter[months]' value='')
+    .section-form__select
+      details.ll-details-closed
+        summary По дате добавления
+        div
+          a(href='javascript:void(0);' onclick='set_form_hidden_value($(this));' data-form_submit='userbook-form-div' data-value='when' data-value_holder='reviews-filter-order') По дате добавления
+          a(href='javascript:void(0);' onclick='set_form_hidden_value($(this));' data-form_submit='userbook-form-div' data-value='bookrating' data-value_holder='reviews-filter-order') По рейтингу книги
+          a(href='javascript:void(0);' onclick='set_form_hidden_value($(this));' data-form_submit='userbook-form-div' data-value='plus' data-value_holder='reviews-filter-order') Самые популярные
+          a(href='javascript:void(0);' onclick='set_form_hidden_value($(this));' data-form_submit='userbook-form-div' data-value='discussed' data-value_holder='reviews-filter-order') Самые обсуждаемые
+      input#reviews-filter-order(type='hidden' name='filter[order]' value='when\
+      ')
+  input(type='hidden' name='filter[page]' value='reviews')
+  input#user_login-input(type='hidden' name='filter[user_login]' value='')

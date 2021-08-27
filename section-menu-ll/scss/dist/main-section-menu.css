@@ -1,0 +1,109 @@
+.section-menu {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0 0 5px;
+  width: 100%;
+}
+
+.section-menu__limiter {
+  width: 100%;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  padding: 0 0 20px;
+  margin: 0 0 -20px;
+}
+
+.section-menu__list {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section-menu__item {
+  display: block;
+  margin: 0 17px 0 0;
+}
+.section-menu__item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 32px;
+  border-radius: 16px;
+  background: #edf0f7;
+  color: #252626;
+  font: 16px/29px "Source Sans Pro", sans-serif;
+  padding: 0 16px;
+}
+.section-menu__item a:visited {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 32px;
+  border-radius: 16px;
+  background: #edf0f7;
+  color: #252626;
+  font: 16px/29px "Source Sans Pro", sans-serif;
+  padding: 0 16px;
+}
+.section-menu__item a:hover {
+  background: #e6e9f0;
+}
+.section-menu__item.section-menu__item--active a {
+  background: #6f7073;
+  color: #fff;
+}
+
+.section-menu__list .slick-arrow {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  width: 48px;
+  height: 32px;
+  border-radius: inherit;
+  top: 0;
+}
+.section-menu__list .slick-arrow:before {
+  z-index: 2;
+  border-color: #88898c;
+  width: 8px;
+  height: 8px;
+  top: calc(50% - 5px);
+}
+.section-menu__list .slick-arrow:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #edf0f7;
+}
+.section-menu__list .slick-arrow:after:hover {
+  background: #e6e9f0;
+}
+.section-menu__list .slick-prev::before {
+  left: 13px;
+}
+.section-menu__list .slick-next::before {
+  right: 13px;
+  left: auto;
+}
+.section-menu__list .slick-prev {
+  left: 0;
+}
+.section-menu__list .slick-prev::after {
+  left: 0;
+}
+.section-menu__list .slick-next {
+  right: 0;
+}
+.section-menu__list .slick-next::after {
+  right: 0;
+}
+
+.section-menu + .popup-redactor {
+  margin: 15px 0 5px;
+}
