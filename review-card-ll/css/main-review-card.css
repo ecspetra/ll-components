@@ -517,6 +517,10 @@
   width: calc(100% - 74px);
 }
 
+.statuses-card .lenta-card-book__wrapper {
+  width: calc(100% - 136px);
+}
+
 .lenta-card__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -918,6 +922,27 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   white-space: normal;
+}
+
+.advice-slider-for .lenta-card-book__wrapper {
+  position: relative;
+  margin: 0 0 12px;
+  width: calc(100% - 100px);
+  padding-left: 100px;
+}
+
+.main-bh .lenta-card-book__wrapper,
+.main-br .lenta-card-book__wrapper {
+  width: calc(50% + 12px);
+}
+
+.userbook-container {
+  position: initial !important;
+  display: contents;
+}
+
+.blist-compact .brow .book-data.book-data-small .userbook-container.btn-add-plus__wrapper {
+  width: 120px;
 }
 
 .review-card .lenta-card__author-wrap {
@@ -1426,6 +1451,321 @@
     width: 622px;
     margin: 0 0 24px;
   }
+}
+.btn-add-plus {
+  position: relative;
+  border-radius: 16px;
+  border: 1px solid #3e99ed;
+  background-color: #3e99ed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 32px;
+  width: 100%;
+}
+
+.btn-add-plus:hover {
+  border-color: #3b91e0;
+  background-color: #3b91e0;
+}
+
+.btn-add-plus::before {
+  position: absolute;
+  content: "Добавить";
+  font: 600 16px/16px "Source Sans Pro", sans-serif;
+  color: #fff;
+  height: 18px;
+  left: calc(50% - 27px);
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.btn-add-plus::after {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: calc(50% - 53px);
+  background: url("/img/skins/ll2019/SVGsprite13.svg") -114px -156px no-repeat;
+}
+
+.btn-add-plus--add {
+  border-color: #3e99ed;
+  background-color: #fff;
+}
+
+.btn-add-plus--add:hover {
+  background: rgba(89, 199, 255, 0.07);
+}
+
+.btn-add-plus--add::before {
+  content: "Изменить";
+  color: #3b91e0;
+}
+
+.btn-add-plus--add::after {
+  background: url("/img/skins/ll2019/SVGsprite13.svg") -140px -156px no-repeat;
+}
+
+.histories-card .btn-add-plus,
+.review-card .btn-add-plus,
+.quote-card .btn-add-plus,
+.exchange-card .btn-add-plus,
+.lifehack-card .btn-add-plus,
+.statuses-card .btn-add-plus {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 48px;
+}
+
+.histories-card .btn-add-plus:hover,
+.review-card .btn-add-plus:hover,
+.quote-card .btn-add-plus:hover,
+.exchange-card .btn-add-plus:hover,
+.lifehack-card .btn-add-plus:hover,
+.statuses-card .btn-add-plus:hover {
+  border: none;
+  background: transparent;
+}
+
+.statuses-card .btn-add-plus {
+  bottom: 32px;
+  right: 19px;
+}
+
+.histories-card .btn-add-plus::before,
+.review-card .btn-add-plus::before,
+.quote-card .btn-add-plus::before,
+.lifehack-card .btn-add-plus::before,
+.statuses-card .btn-add-plus::before,
+.exchange-card .btn-add-plus::before {
+  display: none;
+}
+
+.exchange-card .btn-add-plus::after,
+.histories-card .btn-add-plus::after,
+.review-card .btn-add-plus::after,
+.quote-card .btn-add-plus::after,
+.lifehack-card .btn-add-plus::after,
+.statuses-card .btn-add-plus::after {
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  background: url("/img/skins/ll2019/SVGsprite13.svg") 0 -210px no-repeat;
+}
+
+.exchange-card .btn-add-plus--add::after,
+.histories-card .btn-add-plus--add::after,
+.review-card .btn-add-plus--add::after,
+.quote-card .btn-add-plus--add::after,
+.lifehack-card .btn-add-plus--add::after,
+.statuses-card .btn-add-plus--add::after {
+  background: url("/img/skins/ll2019/SVGsprite13.svg") -34px -210px no-repeat;
+}
+
+.review-card .btn-add-plus::after {
+  background: url("/img/skins/ll2019/SVGsprite13.svg") -68px -210px no-repeat;
+}
+
+.review-card .btn-add-plus--add::after {
+  background: url("/img/skins/ll2019/SVGsprite13.svg") -102px -210px no-repeat;
+}
+
+.btn-add-plus__menu-block {
+  position: absolute;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  left: calc(50% - 92px);
+  bottom: 96px;
+  background-color: #fff;
+  padding: 24px 32px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.25);
+  z-index: 10;
+}
+
+.btn-add-plus__status {
+  font: 300 18px/28px "Source Sans Pro", sans-serif;
+  color: #252626;
+  margin: 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.btn-add-plus__change,
+.btn-add-plus__change:visited {
+  display: none;
+  font: 600 18px/28px "Source Sans Pro", sans-serif;
+  color: #3e99ed;
+  margin-top: 4px;
+}
+
+.btn-add-plus:active ~ .btn-add-plus__menu-block {
+  -webkit-animation: show 1s ease;
+  animation: show 1s ease;
+}
+
+.advice-slider-for__item .btn-add-plus {
+  margin: -14px 12px 0 auto;
+  width: 138px;
+}
+
+.btn-add-plus--add + .bc-menu__status-lists {
+  top: 0;
+}
+
+.bc-menu .btn-add-plus {
+  height: 40px;
+  border-radius: 20px;
+}
+
+.bc-menu .btn-add-plus::before {
+  font-size: 18px;
+}
+
+.bc-menu .btn-add-plus::before {
+  left: calc(50% - 32px);
+}
+
+.bc-menu .btn-add-plus::after {
+  left: calc(50% - 60px);
+}
+
+.kv-slider-read .btn-add-plus {
+  margin: 10px 0 0;
+}
+
+.darkstyle .slide-book__item .btn-add-plus--add {
+  background: transparent;
+}
+
+.darkstyle .kv-wtr .slide-book__list a:not(.btn-add-plus):not(.bc-menu__status-lists),
+.darkstyle .kv-wtr .slide-book__rating {
+  color: #252626;
+}
+
+.main-block__list .review-card .btn-add-plus::after {
+  width: 24px;
+  height: 24px;
+  background: url("/img/skins/ll2019/SVGsprite13.svg") -104px -104px no-repeat;
+}
+
+.main-block__list .review-card .btn-add-plus--add::after {
+  background: url("/img/skins/ll2019/SVGsprite13.svg") -130px -104px no-repeat;
+}
+
+.main-block__list .histories-card .btn-add-plus,
+.main-block__list .review-card .btn-add-plus,
+.main-block__list .quote-card .btn-add-plus,
+.main-block__list .exchange-card .btn-add-plus,
+.main-block__list .lifehack-card .btn-add-plus,
+.main-block__list .statuses-card .btn-add-plus {
+  width: 24px;
+  height: 24px;
+  bottom: 24px;
+}
+
+.main-block__list .histories-card .btn-add-plus::after,
+.main-block__list .quote-card .btn-add-plus::after,
+.main-block__list .lifehack-card .btn-add-plus::after {
+  width: 24px;
+  height: 24px;
+  background: url(/img/skins/ll2019/SVGsprite13.svg) 0 -26px no-repeat;
+}
+
+.main-block__list .histories-card .btn-add-plus--add::after,
+.main-block__list .quote-card .btn-add-plus--add::after,
+.main-block__list .lifehack-card .btn-add-plus--add::after {
+  width: 24px;
+  height: 24px;
+  background: url(/img/skins/ll2019/SVGsprite13.svg) -26px -26px no-repeat;
+}
+
+.main-block .advice-slider-for__item .btn-add-plus {
+  margin: -14px 0 0 auto;
+}
+
+.btn-add-plus--add + .book-item__status-lists {
+  top: -272px;
+}
+
+.book-item__item .btn-add-plus,
+.book-item__item .btn-add-plus:visited {
+  grid-area: btn-add;
+  color: #fff;
+  margin: 13px 0 0;
+}
+
+.book-item--min .btn-add-plus {
+  height: 28px;
+  border-radius: 14px;
+  margin: 0;
+}
+
+.book-item--min .btn-add-plus::before {
+  font-size: 14px;
+}
+
+/* .main-block__list .review-card .btn-add-plus::after {
+  width: 24px;
+  height: 24px;
+  background: url("/img/skins/ll2019/SVGsprite13.svg") -362px -168px no-repeat; }
+
+.main-block__list .review-card .btn-add-plus--add::after {
+  background: url("/img/skins/ll2019/SVGsprite13.svg") -387px -168px no-repeat; }  */
+.main-block__list .histories-card .btn-add-plus,
+.main-block__list .review-card .btn-add-plus,
+.main-block__list .quote-card .btn-add-plus,
+.main-block__list .exchange-card .btn-add-plus,
+.main-block__list .lifehack-card .btn-add-plus,
+.main-block__list .statuses-card .btn-add-plus {
+  width: 24px;
+  height: 24px;
+  bottom: 24px;
+}
+
+.lists__item .btn-add-plus,
+.lists__item .btn-add-plus:visited {
+  color: #fff;
+  margin: 10px 0 0;
+}
+
+.lists-3 li:not(.slide-book__item) .btn-add-plus {
+  width: 112px;
+  margin: auto 0;
+}
+
+.lists-3 .btn-add-plus__wrapper {
+  margin: auto 0;
+}
+
+.blist-compact .brow .book-data.book-data-small .userbook-container.btn-add-plus__wrapper {
+  width: 120px;
 }
 
 /*# sourceMappingURL=main-review-card.css.map */

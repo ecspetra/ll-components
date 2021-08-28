@@ -536,6 +536,9 @@
   z-index: 6;
   width: calc(100% - 74px);
 }
+.statuses-card .lenta-card-book__wrapper {
+  width: calc(100% - 136px);
+}
 
 .lenta-card__wrap {
   display: -webkit-box;
@@ -952,6 +955,30 @@
     -webkit-box-orient: vertical;
     white-space: normal;
   }
+}
+
+.advice-slider-for .lenta-card-book__wrapper {
+  position: relative;
+  margin: 0 0 12px;
+  width: calc(100% - 100px);
+  padding-left: 100px;
+}
+
+.main-bh .lenta-card-book__wrapper,
+.main-br .lenta-card-book__wrapper {
+  width: calc(50% + 12px);
+}
+
+.userbook-container {
+  position: initial !important;
+  display: contents;
+}
+
+.blist-compact
+  .brow
+  .book-data.book-data-small
+  .userbook-container.btn-add-plus__wrapper {
+  width: 120px;
 }
 
 .review-card .lenta-card__author-wrap {
