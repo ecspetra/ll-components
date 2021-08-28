@@ -1,0 +1,103 @@
+.lenta__wrapper {
+  position: -webkit-sticky;
+  position: sticky;
+  overflow: hidden;
+  max-height: calc(100vh - 204px);
+  top: 82px;
+  width: 162px;
+  margin: 0 16px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.lenta__limiter {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.lenta__wrapper input {
+  display: none;
+}
+.lenta__wrapper input[type=radio]:checked + .lenta-group__title::after {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 23px;
+}
+
+.lenta__wrapper input[type=radio]:checked + label + .lenta-user__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.lenta-user__list {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.lenta-user__list input:checked + label {
+  background-color: #d2d4d6;
+}
+.lenta-user__list input:checked + label .lenta-user__name {
+  font-weight: 600;
+}
+
+.lenta-user__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 7px 8px;
+  border-radius: 20px;
+  position: relative;
+}
+.lenta-user__item:hover {
+  background-color: #edf0f7;
+}
+
+.lenta-user__name {
+  color: #252626;
+  font: 16px/24px "Source Sans Pro", sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lenta-user__avatar {
+  border-radius: 50%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 8px 0 0;
+  width: 26px;
+  height: 26px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  object-fit: cover;
+  -o-object-fit: cover;
+}
+
+.lenta-user__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/*# sourceMappingURL=left-sidebar.css.map */
