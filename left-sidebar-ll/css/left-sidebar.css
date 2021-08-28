@@ -100,4 +100,13 @@
   display: flex;
 }
 
+@media (min-width: 1140px) {
+  .lenta__wrapper,
+.ugs-sotring__item a,
+.ugs-sotring {
+    margin: 0 24px 0 0;
+    width: 170px;
+  }
+}
+
 /*# sourceMappingURL=left-sidebar.css.map */

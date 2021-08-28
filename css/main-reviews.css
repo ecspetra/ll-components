@@ -36849,6 +36849,14 @@ form#regForm__checkin.processing:after, form#regForm__singin.processing:after, f
   display: flex;
 }
 
+@media (min-width: 1140px) {
+  .lenta__wrapper,
+.ugs-sotring__item a,
+.ugs-sotring {
+    margin: 0 24px 0 0;
+    width: 170px;
+  }
+}
 @media (min-width: 1024px) {
   .left-column {
     position: relative;
